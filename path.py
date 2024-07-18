@@ -61,16 +61,11 @@ def find_optimal_path(graph, start, end):
             if node not in visited and (min_node is None or distances[node] < distances[min_node]):
 
                 min_node = node
+                
+                if min_node is None:
+                    break
 
-
-
-        if min_node is None:
-
-            break
-
-
-
-        visited.add(min_node)
+                visited.add(min_node)
 
 
 
@@ -93,8 +88,7 @@ def main():
     # Demonstrate errors and inefficiencies
 
     z = complex(3, 4)
-	num = abs(z)
-
+    num = abs(z)
     result = complex_number_factorial(num)  # Incorrect function
 
     print(result)
