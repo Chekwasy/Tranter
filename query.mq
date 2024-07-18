@@ -1,0 +1,18 @@
+//This selects item from orders where total_amount is greaterthan total_amount column average in orders table
+SELECT *
+FROM orders
+WHERE total_amount > (SELECT AVG(total_amount) FROM orders);
+
+SELECT orders.*, customers.name
+FROM orders
+JOIN customers ON orders.customer_id = ();
+
+SELECT region, SUM sales
+FROM orders
+GROUP BY region
+HAVING SUM(sales) > 1000;
+
+
+SELECT *,
+ROW_NUMBER() OVER (PARTITION BY region ORDER BY sales DESC) AS row_num
+FROM orders;
