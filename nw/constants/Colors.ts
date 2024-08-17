@@ -10,6 +10,8 @@ export const Colors = {
   WHITE: '#fff',
   madublue: '#020C2F',
   Black: '#000',
+  Grey: '#808080',
+  Verify: '#41dc8e',
   light: {
     text: '#11181C',
     background: '#fff',
