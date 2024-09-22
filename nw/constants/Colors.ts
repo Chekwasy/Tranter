@@ -12,6 +12,7 @@ export const Colors = {
   Black: '#000',
   Grey: '#808080',
   Verify: '#41dc8e',
+  lightgrey: '#cccccc',
   light: {
     text: '#11181C',
     background: '#fff',
