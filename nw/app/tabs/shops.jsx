@@ -513,10 +513,14 @@ export default function shops() {
                             <FlatList
                                 data={Object.values(item)[0]}
                                 renderItem={({ item }) => (
-                                    <Text key={item.simpleid} style={{
+                                    <View style={{
                                         width: '100%',
-                                        height: item.message.length < 200 ? 'auto' : 100,
-                                    }}>{item.message}</Text>
+                                        alignItems: 'flex-start',
+                                    }}>
+                                        <Text key={item.simpleid} style={{
+                                            flexWrap: 'wrap',
+                                        }}>{item.message}</Text>
+                                    </View>
                                 )}
                                 initialNumToRender={10}
                                 keyExtractor={(item) => item.simpleid.toString()}
