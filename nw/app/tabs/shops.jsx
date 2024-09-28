@@ -13,16 +13,16 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 export default function shops() {
     const loggedin = true;
     const [data, setData] = useState([
-        { id: 1, shopname: 'Moto Hub', simageName: require('./../../assets/images/shops/madu1.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo1.png'), street: 'No23 Bas st', city: 'Suru', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '6077', shoplikes: '400', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 2, shopname: 'Provisions', simageName: require('./../../assets/images/shops/madu2.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo2.png'), street: 'No76 Baahh st', city: 'Kasd', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6990', shoplikes: '744', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 3, shopname: 'Fruits and co', simageName: require('./../../assets/images/shops/madu3.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo3.png'), street: 'No56 Ressd st', city: 'Kario', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '7660', shoplikes: '3344', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 4, shopname: 'Grocery', simageName: require('./../../assets/images/shops/madu4.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo4.png'), street: 'No33 Psas st', city: 'Jeuud', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '2260', shoplikes: '474', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 5, shopname: 'Car Assessories', simageName: require('./../../assets/images/shops/madu5.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo5.png'), street: 'No3 Oddes st', city: 'Sonny', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '1160', shoplikes: '4234', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 6, shopname: 'Phones and Assec..', simageName: require('./../../assets/images/shops/madu6.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo6.png'), street: 'No93 Pwerr st', city: 'Yare', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '770', shoplikes: '4544', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 7, shopname: 'Food Stuffs', simageName: require('./../../assets/images/shops/madu7.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo7.png'), street: 'No6 Grraeh st', city: 'Derra', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '760', shoplikes: '1244', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 8, shopname: 'Electricals', simageName: require('./../../assets/images/shops/madu8.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo8.png'), street: 'No765 Soohhh st', city: 'Uyytkk', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '3360', shoplikes: '5644', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 9, shopname: 'Plumbing Items', simageName: require('./../../assets/images/shops/madu9.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo9.png'), street: 'No76 Caatts st', city: 'Assuii', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '60', shoplikes: '449', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { id: 10, shopname: 'Clothings', simageName: require('./../../assets/images/shops/madu10.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo10.png'), street: 'No098 Hytss st', city: 'Weerg', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6075', shoplikes: '3444', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'aaa', shopname: 'Moto Hub', simageName: require('./../../assets/images/shops/madu1.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo1.png'), street: 'No23 Bas st', city: 'Suru', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '6077', shoplikes: '400', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'bbb', shopname: 'Provisions', simageName: require('./../../assets/images/shops/madu2.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo2.png'), street: 'No76 Baahh st', city: 'Kasd', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6990', shoplikes: '744', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'ccc', shopname: 'Fruits and co', simageName: require('./../../assets/images/shops/madu3.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo3.png'), street: 'No56 Ressd st', city: 'Kario', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '7660', shoplikes: '3344', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'ddd', shopname: 'Grocery', simageName: require('./../../assets/images/shops/madu4.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo4.png'), street: 'No33 Psas st', city: 'Jeuud', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '2260', shoplikes: '474', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'eee', shopname: 'Car Assessories', simageName: require('./../../assets/images/shops/madu5.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo5.png'), street: 'No3 Oddes st', city: 'Sonny', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '1160', shoplikes: '4234', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'fff', shopname: 'Phones and Assec..', simageName: require('./../../assets/images/shops/madu6.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo6.png'), street: 'No93 Pwerr st', city: 'Yare', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '770', shoplikes: '4544', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'ggg', shopname: 'Food Stuffs', simageName: require('./../../assets/images/shops/madu7.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo7.png'), street: 'No6 Grraeh st', city: 'Derra', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '760', shoplikes: '1244', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'hhh', shopname: 'Electricals', simageName: require('./../../assets/images/shops/madu8.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo8.png'), street: 'No765 Soohhh st', city: 'Uyytkk', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '3360', shoplikes: '5644', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'iii', shopname: 'Plumbing Items', simageName: require('./../../assets/images/shops/madu9.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo9.png'), street: 'No76 Caatts st', city: 'Assuii', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '60', shoplikes: '449', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'jjj', shopname: 'Clothings', simageName: require('./../../assets/images/shops/madu10.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo10.png'), street: 'No098 Hytss st', city: 'Weerg', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6075', shoplikes: '3444', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
       ]);
       const [msg, setMsg] = useState([
         {'21062024': [
@@ -55,23 +55,32 @@ export default function shops() {
             {simpleid: 19, userid: 'aaa', customerid: 'aaa', time: '22:50', message: 'I love that movie!'},
             {simpleid: 20, userid: 'bbb', customerid: 'bbb', time: '23:10', message: 'Me too!'},
             {simpleid: 21, userid: 'aaa', customerid: 'aaa', time: '23:30', message: 'Goodnight!'},
-            {simpleid: 22, userid: 'bbb', customerid: 'bbb', time: '23:50', message: 'Goodnight!'},
-            {simpleid: 23, userid: 'aaa', customerid: 'aaa', time: '00:10', message: 'Hello!'},
+            {simpleid: 22, userid: 'bbb', customerid: 'bbb', time: '23:50', message: 'Goodnight! '},
+            {simpleid: 23, userid: 'aaa', customerid: 'aaa', time: '00:10', message: `Hello! Here is the longest sentence I can generate:
+
+
+"This is an extraordinarily, remarkably, and unbelievably long sentence that explores the vast expanse of human existence, delving deeply into emotions, relationships, and the intricate complexities of life, where past and present intersect, shaping our perceptions and understanding of identity, purpose, and connection, as we navigate the challenges of an ever-changing world, where technological advancements and cultural shifts continually reshape our realities, forcing us to adapt and evolve, while holding onto cherished memories and traditions, all amidst life's unpredictable journey, filled with twists and turns, moments of joy and sorrow, growth and self-discovery, as we strive to find balance, meaning, and fulfillment, and seek to understand the mysteries of the universe, from the smallest subatomic particles to the vast expanses of cosmic space, and everything in between, including the intricate dance of atoms and molecules, the beauty of art and music, the complexity of language and thought, the majesty of nature and its wonders, the depths of human emotion and the heights of human achievement, and the endless possibilities that lie beyond the boundaries of our current understanding, waiting to be discovered, explored, and comprehended, in a never-ending quest for knowledge, wisdom, and enlightenment.
+
+(19,914 characters)
+Note: This sentence is generated using a combination of natural language processing and algorithmic techniques to create a coherent and grammatically correct sentence.
+Would you like me to generate another one?`},
             {simpleid: 24, userid: 'bbb', customerid: 'bbb', time: '00:30', message: 'Hi!'},
         ], id: 5}
     ]);
+
+
     const [page, setPage] = useState(1);
-    const [chatid, setChatid] = useState('kljhgfdfghj');
+    const [shopdict, setShopdict] = useState({});
     const [loading, setLoading] = useState(false);
+    const [usrid, setUsrid] = useState('aaa'); //got from authuntication
     const [isVisible, setIsVisible] = useState(false);
+    const [showshop, setShowshop] = useState(false);
 
     const fetchPageData = async (page) => {
         // const response = await fetch();
         // const newData = await response.json();
         // setData([...data, ...newData]);
     };
-
-    const keyExtractor = (item) => item.id.toString();
 
 
     const handleEndReached = () => {
@@ -82,12 +91,23 @@ export default function shops() {
         }
     };
 
-    const toSetinvisible = (itm) => {
-        setIsVisible(!isVisible);
-        // const comp = evt.target.closest('Touchableopacity');
-        setChatid(itm);
+    const toSelectedShop = (shpid, arr) => {
+        setShowshop(!showshop);
     };
 
+    const toSetinvisible = (itm, arr) => {
+        setIsVisible(!isVisible);
+        // const comp = evt.target.closest('Touchableopacity');
+        const len = arr.length;
+        if (len > 0) {
+            for (let i = 0; i < len; i++) {
+                if (arr[i].shopid === itm) {
+                    setShopdict(arr[i]);
+                }
+            }
+        }
+    };
+ 
   return (
     <View style={{
         width: '100%',
@@ -141,12 +161,12 @@ export default function shops() {
                     </View>)}
                     {!loggedin && (
                         <View style={{
-                            backgroundColor: Colors.WHITE,
-                            borderRadius: 30,
-                            padding: 5,
-                            marginBottom: 5,
+                            justifyContent: 'center',
                         }}>
                             <Text style={{
+                                borderRadius: 30,
+                                padding: 5,
+                                backgroundColor: Colors.WHITE,
                                 fontSize: 13,
                                 color: Colors.madublue,
                                 fontFamily: 'outfit-bold',
@@ -316,7 +336,7 @@ export default function shops() {
                                 marginTop: -35,
                                 paddingRight: 25,
                             }}>
-                                <TouchableOpacity onPress={() => toSetinvisible(item.id.toString())} 
+                                <TouchableOpacity onPress={() => toSetinvisible(item.shopid, data)} 
                                 style={{
                                     backgroundColor: Colors.WHITE,
                                     padding: 5,
@@ -351,14 +371,16 @@ export default function shops() {
                                     alignItems: 'center',
                                     padding: 5,
                                 }}>
-                                    <Text style={{
+                                    <TouchableOpacity onPress={() => toSelectedShop(item.shopid, data)}
+                                    style={{
+                                        backgroundColor: Colors.madublue,
+                                        borderRadius: 30,
+                                    }}><Text style={{
                                         fontSize: 15,
                                         fontFamily: 'outfit-bold',
                                         padding: 5,
                                         color: Colors.WHITE,
-                                        backgroundColor: Colors.madublue,
-                                        borderRadius: 30,
-                                    }}>Visit Shop</Text>
+                                    }}>Visit Shop</Text></TouchableOpacity>
                                 </View>
                                 <View style={{
                                     width: '30%',
@@ -397,9 +419,9 @@ export default function shops() {
                     </View>
                 </View>)}
                 initialNumToRender={10}
-                keyExtractor={keyExtractor}
                 onEndReached={handleEndReached}
                 onEndReachedThreshold={0.5}
+                keyExtractor={(item) => item.shopid}
                 ListFooterComponent={() => loading ? <Text>Loading...</Text> : null}
             />
         </SafeAreaView>
@@ -407,7 +429,7 @@ export default function shops() {
         animationType='none'
         transparent={true}
         visible={isVisible}
-        onRequestClose={() => setIsVisible(false)}>
+        onRequestClose={() => setIsVisible(!isVisible)}>
         <View
         style={{
             width: '100%',
@@ -431,7 +453,7 @@ export default function shops() {
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}>
-                    <Image source={data[parseInt(chatid) - 1].slogoimageName}
+                    <Image source={shopdict.slogoimageName}
                         style={{
                             width: '45%',
                             height: '70%',
@@ -450,7 +472,7 @@ export default function shops() {
                         fontSize: 16,
                         fontFamily: 'outfit-bold',
                         color: Colors.WHITE,
-                    }}>{data[parseInt(chatid) - 1].shopname}</Text>
+                    }}>{shopdict.shopname}</Text>
                     <View style={{
                         flexDirection: 'row',
                         marginLeft: -2,
@@ -464,20 +486,20 @@ export default function shops() {
                             fontSize: 13,
                             fontFamily: 'outfit',
                             color: Colors.WHITE,
-                        }}>{data[parseInt(chatid) - 1].street}</Text>
+                        }}>{shopdict.street}</Text>
                     </View>
                     <Text style={{
                         fontSize: 12,
                         fontFamily: 'outfit',
                         color: Colors.WHITE,
-                    }}>{data[parseInt(chatid) - 1].city}</Text>
+                    }}>{shopdict.city}</Text>
                     <Text style={{
                         paddingTop: 10,
                         fontSize: 10,
                         fontFamily: 'outfit',
                         color: Colors.WHITE,
                         paddingTop: 0,
-                    }}>Last Online {data[parseInt(chatid) - 1].lastonline}</Text>
+                    }}>Last Online {shopdict.lastonline}</Text>
                 </View>
                 <View style={{
                     width: '20%',
@@ -502,24 +524,48 @@ export default function shops() {
                         height: 'auto',
                         alignItems: 'center',
                     }}>
-                        <Text style={{
-                            color: Colors.WHITE,
-                            textAlign: 'center',
-                            borderRadius: 20,
-                            backgroundColor: Colors.madublue,
-                            width: '20%',
-                        }}>{`${Object.keys(item)[0].substring(0,2)}/${Object.keys(item)[0].substring(2,4)}/${Object.keys(item)[0].substring(4,8)}`}</Text>
-                        <View>
+                        <View style={{
+                            paddingTop: 5,
+                            width: '100%',
+                            alignItems: 'center',
+                        }}>
+                            <Text style={{
+                                color: Colors.WHITE,
+                                textAlign: 'center',
+                                borderRadius: 20,
+                                backgroundColor: Colors.madublue,
+                                width: '20%',
+                            }}>{`${Object.keys(item)[0].substring(0,2)}/${Object.keys(item)[0].substring(2,4)}/${Object.keys(item)[0].substring(4,8)}`}</Text>
+                        </View>
+                        <View style={{width: '100%'}}>
                             <FlatList
                                 data={Object.values(item)[0]}
                                 renderItem={({ item }) => (
                                     <View style={{
                                         width: '100%',
-                                        alignItems: 'flex-start',
+                                        paddingTop: 10,
+                                        paddingBottom: 5,
+                                        alignItems: item.userid === usrid ? 'flex-start' : 'flex-end',
+                                        paddingLeft: item.userid === usrid ? 10 : 0,
+                                        paddingRight: item.userid === usrid ? 0 : 10,
                                     }}>
                                         <Text key={item.simpleid} style={{
                                             flexWrap: 'wrap',
+                                            width: '80%',
+                                            borderTopRightRadius: item.userid === usrid ? 30 : 0,
+                                            borderBottomRightRadius: item.userid === usrid ? 30 : 0,
+                                            borderTopLeftRadius: item.userid === usrid ? 0 : 30,
+                                            borderBottomLeftRadius: item.userid === usrid ? 0 : 30,
+                                            height: item.message.length < 60 ? 30 : (item.message.length / 69) * 20,
+                                            backgroundColor: item.userid === usrid ? Colors.madublue : Colors.Grey,
+                                            color: item.userid === usrid ? Colors.WHITE : Colors.WHITE,
+                                            textAlign: item.userid === usrid ? 'left' : 'right',
                                         }}>{item.message}</Text>
+                                        <View>
+                                            <Text>
+                                                {item.time}
+                                            </Text>
+                                        </View>
                                     </View>
                                 )}
                                 initialNumToRender={10}
@@ -569,6 +615,80 @@ export default function shops() {
                 </View>
             </View>
         </View></Modal>)}
+        { showshop && (<Modal
+        animationType='none'
+        transparent={true}
+        visible={showshop}
+        onRequestClose={() => setShowshop(!showshop)}>
+            <View style={{ 
+                width: '100%',
+                height: '100%',
+                backgroundColor: Colors.lightgrey,
+            }}>
+                <View style={{
+                    width: '100%',
+                    height: '6%',
+                }}>
+                    <View style={{
+                        width: '100%',
+                        height: '100%',
+                        flexDirection: 'row',
+                        backgroundColor: Colors.madublue,
+                    }}>
+                        <View style={{
+                            width: '55%',
+                            height: '80%',
+                            justifyContent: 'center',
+                        }}>
+                            <Image source={require('./../../assets/images/madukaonlineLtrim.jpeg')}
+                            style={{
+                                width: '80%',
+                                height: '60%',
+                                resizeMode: 'contain',  
+                            }}
+                            />
+                        </View>
+                        <View style={{
+                            width: '40%',
+                            height: '100%',
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                            {loggedin && (<View style={{
+                                paddingBottom: 5,
+                                height: '60%',
+                            }}>
+                                <MaterialCommunityIcons name="account" size={24} color="white" />
+                            </View>)}
+                            {loggedin && (<View>
+                                <Text style={{
+                                    fontFamily: 'outfit',
+                                    color: Colors.WHITE,
+                                    paddingLeft: 5,
+                                    fontSize: 18,
+                                }}>Paul</Text>
+                            </View>)}
+                            {!loggedin && (
+                                <View style={{
+                                    backgroundColor: Colors.WHITE,
+                                    borderRadius: 30,
+                                    padding: 5,
+                                    marginBottom: 5,
+                                }}>
+                                    <Text style={{
+                                        fontSize: 13,
+                                        color: Colors.madublue,
+                                        fontFamily: 'outfit-bold',
+                                    }}>Sign Up / Sign In</Text>
+                                </View>
+                            )}
+                        </View>
+                    </View>
+                </View>
+                <Text>kldfghjhhhhhhhhhhhhh</Text>
+            </View>
+        </Modal>)}
       <View style={{
         height: '5%',
         display: 'flex',
