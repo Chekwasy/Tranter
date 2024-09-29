@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react'
 import { Colors } from './../../constants/Colors'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Entypo from '@expo/vector-icons/Entypo';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Octicons from '@expo/vector-icons/Octicons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
@@ -637,7 +638,7 @@ Would you like me to generate another one?`},
                     }}>
                         <View style={{
                             width: '55%',
-                            height: '80%',
+                            height: '100%',
                             justifyContent: 'center',
                         }}>
                             <Image source={require('./../../assets/images/madukaonlineLtrim.jpeg')}
@@ -686,7 +687,55 @@ Would you like me to generate another one?`},
                         </View>
                     </View>
                 </View>
-                <Text>kldfghjhhhhhhhhhhhhh</Text>
+                <View style={{
+                    width: '100%',
+                    height: '5%',
+                    backgroundColor: Colors.WHITE,
+                    borderTopWidth: 3,
+                    borderTopColor: Colors.lightgrey,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-evenly',
+                }}>
+                    <View style={styles.shoptab}>
+                        <AntDesign name="picture" size={24} color="black" />
+                    </View>
+                    <View style={styles.shoptab}>
+                        <MaterialIcons name="video-collection" size={24} color="black" />
+                    </View>
+                    <View style={styles.shoptab}>
+                        <MaterialCommunityIcons name="message" size={24} color="black" />
+                    </View>
+                    <View style={styles.shoptab}>
+                        <MaterialIcons name="add-home" size={24} color="black" />
+                    </View>
+                </View>
+                <View style={{
+                    width: '100%',
+                    height: '20%',
+                    backgroundColor: Colors.WHITE,
+                    borderTopWidth: 3,
+                    flexDirection: 'row',
+                    borderTopColor: Colors.lightgrey,
+                }}>
+                    <View style={{
+                        width: '75%',
+                        height: '100%',
+                    }}
+                    ></View>
+                    <View style={{
+                        width: '25%',
+                        height: '100%',
+                    }}></View>
+                </View>
+                {/* pics and vids change */}
+                <View style={{
+                    width: '100%',
+                    height: '74%',
+                    backgroundColor: Colors.WHITE,
+                    borderTopWidth: 3,
+                    borderTopColor: Colors.lightgrey,
+                }}></View>
             </View>
         </Modal>)}
       <View style={{
@@ -734,4 +783,10 @@ const styles = StyleSheet.create({
         top: '20%',
         left: '10%',
     },
+    shoptab: {
+        width: '20%',
+        height: '80%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
   })
