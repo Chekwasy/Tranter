@@ -9,21 +9,22 @@ import Octicons from '@expo/vector-icons/Octicons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import Feather from '@expo/vector-icons/Feather';
 
 
 export default function shops() {
     const loggedin = true;
     const [data, setData] = useState([
-        { shopid: 'aaa', shopname: 'Moto Hub', simageName: require('./../../assets/images/shops/madu1.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo1.png'), street: 'No23 Bas st', city: 'Suru', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '6077', shoplikes: '400', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'bbb', shopname: 'Provisions', simageName: require('./../../assets/images/shops/madu2.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo2.png'), street: 'No76 Baahh st', city: 'Kasd', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6990', shoplikes: '744', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'ccc', shopname: 'Fruits and co', simageName: require('./../../assets/images/shops/madu3.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo3.png'), street: 'No56 Ressd st', city: 'Kario', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '7660', shoplikes: '3344', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'ddd', shopname: 'Grocery', simageName: require('./../../assets/images/shops/madu4.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo4.png'), street: 'No33 Psas st', city: 'Jeuud', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '2260', shoplikes: '474', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'eee', shopname: 'Car Assessories', simageName: require('./../../assets/images/shops/madu5.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo5.png'), street: 'No3 Oddes st', city: 'Sonny', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '1160', shoplikes: '4234', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'fff', shopname: 'Phones and Assec..', simageName: require('./../../assets/images/shops/madu6.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo6.png'), street: 'No93 Pwerr st', city: 'Yare', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '770', shoplikes: '4544', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'ggg', shopname: 'Food Stuffs', simageName: require('./../../assets/images/shops/madu7.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo7.png'), street: 'No6 Grraeh st', city: 'Derra', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '760', shoplikes: '1244', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'hhh', shopname: 'Electricals', simageName: require('./../../assets/images/shops/madu8.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo8.png'), street: 'No765 Soohhh st', city: 'Uyytkk', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '3360', shoplikes: '5644', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'iii', shopname: 'Plumbing Items', simageName: require('./../../assets/images/shops/madu9.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo9.png'), street: 'No76 Caatts st', city: 'Assuii', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '60', shoplikes: '449', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
-        { shopid: 'jjj', shopname: 'Clothings', simageName: require('./../../assets/images/shops/madu10.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo10.png'), street: 'No098 Hytss st', city: 'Weerg', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6075', shoplikes: '3444', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'aaa', shopname: 'Moto Hub', phonenumber: '4645655551', regdate: '22 Jan 2022', simageName: require('./../../assets/images/shops/madu1.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo1.png'), street: 'No23 Bas st', city: 'Suru', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '6077', shoplikes: '400', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'bbb', shopname: 'Provisions', phonenumber: '4645788551', regdate: '02 Jan 2022', simageName: require('./../../assets/images/shops/madu2.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo2.png'), street: 'No76 Baahh st', city: 'Kasd', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6990', shoplikes: '744', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'ccc', shopname: 'Fruits and co', phonenumber: '752225551', regdate: '22 Mar 2022', simageName: require('./../../assets/images/shops/madu3.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo3.png'), street: 'No56 Ressd st', city: 'Kario', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '7660', shoplikes: '3344', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'ddd', shopname: 'Grocery', phonenumber: '4774125551', regdate: '22 Apr 2022', simageName: require('./../../assets/images/shops/madu4.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo4.png'), street: 'No33 Psas st', city: 'Jeuud', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '2260', shoplikes: '474', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'eee', shopname: 'Car Assessories', phonenumber: '46489962544', regdate: '22 Feb 2022', simageName: require('./../../assets/images/shops/madu5.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo5.png'), street: 'No3 Oddes st', city: 'Sonny', state: 'Lagos, Nigeria', status: false, lastonline: 'Now', shopviews: '1160', shoplikes: '4234', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'fff', shopname: 'Phones and Assec..', phonenumber: '9899963251', regdate: '22 May 2022', simageName: require('./../../assets/images/shops/madu6.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo6.png'), street: 'No93 Pwerr st', city: 'Yare', state: 'Lagos, Nigeria', status: true, lastonline: 'Now', shopviews: '770', shoplikes: '4544', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'ggg', shopname: 'Food Stuffs', phonenumber: '48896544551', regdate: '22 Jun 2022', simageName: require('./../../assets/images/shops/madu7.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo7.png'), street: 'No6 Grraeh st', city: 'Derra', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '760', shoplikes: '1244', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'hhh', shopname: 'Electricals', phonenumber: '4458885541', regdate: '22 Jul 2023', simageName: require('./../../assets/images/shops/madu8.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo8.png'), street: 'No765 Soohhh st', city: 'Uyytkk', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '3360', shoplikes: '5644', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'iii', shopname: 'Plumbing Items', phonenumber: '23665888991', regdate: '21 Sept 2022', simageName: require('./../../assets/images/shops/madu9.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo9.png'), street: 'No76 Caatts st', city: 'Assuii', state: 'Nariobi, Kenya', status: false, lastonline: 'Now', shopviews: '60', shoplikes: '449', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
+        { shopid: 'jjj', shopname: 'Clothings', phonenumber: '87889655222', regdate: '20 Dec 2020', simageName: require('./../../assets/images/shops/madu10.png'), slogoimageName: require('./../../assets/images/shoplogos/slogo10.png'), street: 'No098 Hytss st', city: 'Weerg', state: 'Nariobi, Kenya', status: true, lastonline: 'Now', shopviews: '6075', shoplikes: '3444', shopoverview: `We're a [type of store, e.g. boutique, convenience store, etc.] offering a curated selection of [products/categories]. Our mission is to provide [unique value proposition, e.g. exceptional customer service, high-quality products, etc.].`,},
       ]);
       const [msg, setMsg] = useState([
         {'21062024': [
@@ -72,6 +73,7 @@ Would you like me to generate another one?`},
 
     const [page, setPage] = useState(1);
     const [shopdict, setShopdict] = useState({});
+    const [usrdict, setUsrdict] = useState({userid: 'aaaa', shopliked: ['bbb', 'ccc']});
     const [loading, setLoading] = useState(false);
     const [usrid, setUsrid] = useState('aaa'); //got from authuntication
     const [isVisible, setIsVisible] = useState(false);
@@ -94,6 +96,14 @@ Would you like me to generate another one?`},
 
     const toSelectedShop = (shpid, arr) => {
         setShowshop(!showshop);
+        const len = arr.length;
+        if (len > 0) {
+            for (let i = 0; i < len; i++) {
+                if (arr[i].shopid === shpid) {
+                    setShopdict(arr[i]);
+                }
+            }
+        }
     };
 
     const toSetinvisible = (itm, arr) => {
@@ -710,6 +720,7 @@ Would you like me to generate another one?`},
                         <MaterialIcons name="add-home" size={24} color="black" />
                     </View>
                 </View>
+                {/* After icons row */}
                 <View style={{
                     width: '100%',
                     height: '20%',
@@ -721,12 +732,131 @@ Would you like me to generate another one?`},
                     <View style={{
                         width: '75%',
                         height: '100%',
+                        alignItems: 'center'
                     }}
-                    ></View>
+                    >
+                        <View style={{
+                            width: '90%',
+                            height: '30%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-evenly',
+                        }}>
+                            <Image source={shopdict.slogoimageName}
+                                style={{
+                                    width: '25%',
+                                    height: '75%',
+                                    resizeMode: 'contain',
+                            }}/>
+                            <View style={{
+                                width: '70%',
+                                height: '70%',
+                            }}>
+                                <Text style={{
+                                    fontSize: 13,
+                                    fontFamily: 'outfit-bold',
+                                }}>{shopdict.shopname}</Text>
+                                <View style={{
+                                    flexDirection: 'row',  
+                                }}>
+                                    <EvilIcons name="location" size={10} color="black" />
+                                    <View>
+                                        <Text style={{
+                                            fontSize: 10,
+                                            fontFamily: 'outfit',
+                                        }}>{`${shopdict.street}, ${shopdict.city}`} </Text>
+                                        <Text style={{
+                                            fontSize: 8,
+                                            fontFamily: 'outfit',
+                                        }}>{shopdict.state}</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        {/* Discription */}
+                        <View style={{
+                            width: '80%',
+                            height: '70%',
+                            justifyContent: 'space-evenly',
+                        }}>
+                            <Text style={{
+                                fontFamily: 'outfit-bold',
+                                fontSize: 11,
+                            }}>Overview</Text>
+                            <Text style={{
+                                fontFamily: 'outfit',
+                                fontSize: 10,
+                            }}>{shopdict.shopoverview}</Text>
+                            <Text style={{
+                                fontFamily: 'outfit',
+                                fontSize: 9,
+                                borderWidth: 1,
+                                borderRadius: 20,
+                                borderColor: Colors.madublue,
+                                width: '20%',
+                                textAlignVertical: 'center',
+                                textAlign: 'center',
+                            }}>Verified</Text>
+                            <View style={{
+                                flexDirection: 'row',
+                                width: '100%',
+                                justifyContent: 'space-evenly',
+                            }}>
+                                <View style={{width: '5%'}}><Feather name="phone" size={10} color="black" /></View>
+                                <Text style={{
+                                    fontFamily: 'outfit',
+                                    fontSize: 11,
+                                    width: '90%',
+                                }}>{shopdict.phonenumber}</Text>
+                            </View>
+                        </View>
+                    </View>
                     <View style={{
                         width: '25%',
                         height: '100%',
-                    }}></View>
+                        justifyContent: 'space-evenly',
+                    }}>
+                        <View style={{
+                            width: '100%',
+                            height: '20%',
+                        }}>
+                            <Text style={{
+                                fontFamily: 'outfit-bold',
+                                fontSize: 11,
+                            }}>Since:</Text>
+                            <Text>{shopdict.regdate}</Text>
+                        </View>
+                        <View style={{
+                            width: '100%',
+                            height: '20%',
+                        }}>
+                            <Text style={{
+                                fontFamily: 'outfit-bold',
+                                fontSize: 11,
+                            }}>Shop views:</Text>
+                            <Text>{shopdict.shopviews}</Text>
+                        </View>
+                        <View style={{
+                            width: '100%',
+                            height: '20%',
+                        }}>
+                            <Text style={{
+                                fontFamily: 'outfit-bold',
+                                fontSize: 11,
+                            }}>Shop likes:</Text>
+                            <Text>{shopdict.shoplikes}</Text>
+                        </View>
+                        <View style={{
+                            width: '100%',
+                            height: '20%',
+                            flexDirection: 'row',
+                            justifyContent: 'space-evenly',
+                        }}>
+                            {usrdict.shopliked.includes(shopdict.shopid) && <View style={{width: '45%'}}><AntDesign name="like1" size={18} color="black" /></View>}
+                            {!usrdict.shopliked.includes(shopdict.shopid) && <View style={{width: '45%'}}><AntDesign name="like2" size={18} color="black" /></View>}
+                            <View style={{width: '45%'}}><MaterialCommunityIcons name="book-edit-outline" size={18} color="black" /></View>
+                        </View>
+                    </View>
                 </View>
                 {/* pics and vids change */}
                 <View style={{
