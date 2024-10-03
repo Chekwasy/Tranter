@@ -1,5 +1,5 @@
 import { View, Text, Modal, TextInput, FlatList, TouchableOpacity, StyleSheet, Image, SafeAreaView} from 'react-native'
-import Video from 'react-native-video' 
+import { Video } from 'expo-av' 
 import React, { useState, useRef } from 'react'
 import { Colors } from './../../constants/Colors'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -997,71 +997,89 @@ Would you like me to generate another one?`},
                     data={pics}
                     renderItem={({ item }) => (
                         <View style={{
-                            width: '80%',
-                            height: 500,
+                            width: '100%',
+                            height: 400,
                             alignItems: 'center',
+                            borderTopWidth: 3,
+                            borderTopColor: Colors.madublue,
                             justifyContent: 'space-evenly',
                         }}>
-                            <Video source={item.vid}
+                            <Video 
+                                source={item.vid}
+                                useNativeControls
+                                resizeMode='contain'
                                 style={{
-                                    width: '90%',
+                                    width: '100%',
                                     height: '70%',
-                                    resizeMode: 'contain',
                             }}/>
                             <View style={{
-                                width: '80%',
-                                height: '30%',
+                                width: '100%',
+                                height: '20%',
                                 alignItems: 'center',
                                 justifyContent: 'space-evenly',
                             }}>
                                 <View style={{
                                     width: '100%',
-                                    height: '40%',
+                                    height: '30%',
                                     flexDirection: 'row',
                                 }}>
-                                    <Text style={{
-                                        width: '70%',
-                                        fontFamily: 'outfit',
-                                        fontSize: 12,
-                                        textAlign: 'center',
-                                        textAlignVertical: 'center',
-                                    }}>
-                                        {item.pic_name}
-                                    </Text>
-                                    <Text style= {{
-                                        fontFamily: 'outfit',
-                                        fontSize: 12,
-                                        width: '30%',
-                                        textAlign: 'center',
-                                        backgroundColor: Colors.madublue,
-                                        borderRadius: 20,
-                                        color: Colors.WHITE,
-                                        textAlignVertical: 'center',
-                                    }}>
-                                        View
-                                    </Text>
+                                    <View style={{width: '50%', height: '100%', alignItems: 'center',}}>
+                                        <Text style={{
+                                            width: '50%',
+                                            height: '100%',
+                                            backgroundColor: Colors.lightgrey,
+                                            borderRadius: 20,
+                                            fontFamily: 'outfit',
+                                            fontSize: 12,
+                                            textAlign: 'center',
+                                            textAlignVertical: 'center',
+                                        }}>
+                                            {item.pic_name}
+                                        </Text>
+                                    </View>
+                                    <View style={{width: '50%', height: '100%', alignItems: 'center',}}>
+                                        <Text style= {{
+                                            fontFamily: 'outfit',
+                                            fontSize: 12,
+                                            width: '50%',
+                                            height: '100%',
+                                            textAlign: 'center',
+                                            backgroundColor: Colors.madublue,
+                                            borderRadius: 20,
+                                            color: Colors.WHITE,
+                                            textAlignVertical: 'center',
+                                        }}>
+                                            View
+                                        </Text>
+                                    </View>
                                 </View>
                                 <View style={{
                                     width: '100%',
-                                    height: '40%',
+                                    height: '30%',
                                     flexDirection: 'row',
                                 }}>
-                                    <Text style={{
-                                        fontFamily: 'outfit',
-                                        fontSize: 12,
-                                        width: '70%',
-                                        textAlign: 'center',
-                                        textAlignVertical: 'center',
-                                    }}>{`${item.currency} ${item.price}`}</Text>
-                                    <Text style={{
-                                        width: '30%',
-                                        textAlign: 'center',
-                                        textAlignVertical: 'center',
-                                        backgroundColor: Colors.lightgrey,
-                                        borderRadius: 20,
-                                        fontFamily: 'outfit',
-                                        fontSize: 9,
-                                    }}>{item.updated}</Text>
+                                    <View style={{width: '50%', height: '100%', alignItems: 'center',}}>
+                                        <Text style={{
+                                            fontFamily: 'outfit',
+                                            fontSize: 12,
+                                            width: '50%',
+                                            height: '100%',
+                                            textAlign: 'center',
+                                            textAlignVertical: 'center',
+                                        }}>{`${item.currency} ${item.price}`}</Text>
+                                    </View>
+                                    <View style={{width: '50%', height: '100%', alignItems: 'center',}}>
+                                        <Text style={{
+                                            width: '50%',
+                                            height: '100%',
+                                            textAlign: 'center',
+                                            textAlignVertical: 'center',
+                                            backgroundColor: Colors.lightgrey,
+                                            borderRadius: 20,
+                                            fontFamily: 'outfit',
+                                            fontSize: 9,
+                                        }}>{item.updated}</Text>
+                                    </View>
                                 </View>
                             </View>
                         </View>
