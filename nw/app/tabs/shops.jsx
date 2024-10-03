@@ -1,4 +1,5 @@
-import { View, Text, Modal, TextInput, FlatList, TouchableOpacity, StyleSheet, Image, Touchable, SafeAreaView, KeyboardAvoidingView } from 'react-native'
+import { View, Text, Modal, TextInput, FlatList, TouchableOpacity, StyleSheet, Image, SafeAreaView} from 'react-native'
+import Video from 'react-native-video' 
 import React, { useState, useRef } from 'react'
 import { Colors } from './../../constants/Colors'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -70,8 +71,22 @@ Would you like me to generate another one?`},
         ], id: 5}
     ]);
 
+    const [pics, setPics] = useState([
+        {id: 1, shopid: 'aaa', userid: 'aaa', pic_name: 'Chair', price: '15000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_1.jpg'), vid: require('./../../assets/videos/shop_aaa/aaa_v1.mp4'), updated: '02 Jan 2024'},
+        {id: 2, shopid: 'aaa', userid: 'aaa', pic_name: 'Book', price: '30000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_2.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v2.mp4'), updated: '05 Jan 2024'},
+        {id: 3, shopid: 'aaa', userid: 'aaa', pic_name: 'Bag', price: '31000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_3.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v3.mp4'), updated: '05 Feb 2024'},
+        {id: 4, shopid: 'aaa', userid: 'aaa', pic_name: 'Table', price: '149000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_4.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v4.mp4'), updated: '17 Mar 2024'},
+        {id: 5, shopid: 'aaa', userid: 'aaa', pic_name: 'Pot', price: '30000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_5.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v5.mp4'), updated: '22 Jan 2023'},
+        {id: 6, shopid: 'aaa', userid: 'aaa', pic_name: 'Pressure Cooker', price: '20000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_6.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v6.mp4'), updated: '13 May 2024'},
+        {id: 7, shopid: 'aaa', userid: 'aaa', pic_name: 'Fan', price: '17000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_7.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v7.mp4'), updated: '15 Apr 2024'},
+        {id: 8, shopid: 'aaa', userid: 'aaa', pic_name: 'Door', price: '3500000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_8.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v8.mp4'), updated: '09 Jun 2024'},
+        {id: 9, shopid: 'aaa', userid: 'aaa', pic_name: 'Bulb', price: '1600', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_9.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v9.mp4'), updated: '04 Jul 2024'},
+        {id: 10, shopid: 'aaa', userid: 'aaa', pic_name: 'Touch', price: '3000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_10.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v10.mp4'), updated: '24 Aug 2024'},
+    ])
+
 
     const [page, setPage] = useState(1);
+    const [shoptab, setShoptab] = useState('pic');
     const [shopdict, setShopdict] = useState({});
     const [usrdict, setUsrdict] = useState({userid: 'aaaa', shopliked: ['bbb', 'ccc']});
     const [loading, setLoading] = useState(false);
@@ -707,16 +722,44 @@ Would you like me to generate another one?`},
                     alignItems: 'center',
                     justifyContent: 'space-evenly',
                 }}>
-                    <View style={styles.shoptab}>
+                    <TouchableOpacity onPress={() => setShoptab('pic')} style={{
+                        width: '20%',
+                        height: '80%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderBottomWidth: 4,
+                        borderBottomColor: shoptab === 'pic' ? Colors.purple : Colors.WHITE,
+                    }}>
                         <AntDesign name="picture" size={24} color="black" />
-                    </View>
-                    <View style={styles.shoptab}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => setShoptab('vid')} style={{
+                        width: '20%',
+                        height: '80%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderBottomWidth: 4,
+                        borderBottomColor: shoptab === 'vid' ? Colors.purple : Colors.WHITE,
+                    }}>
                         <MaterialIcons name="video-collection" size={24} color="black" />
-                    </View>
-                    <View style={styles.shoptab}>
+                    </TouchableOpacity>
+                    <View style={{
+                        width: '20%',
+                        height: '80%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderBottomWidth: 4,
+                        borderBottomColor: shoptab === 'msg' ? Colors.purple : Colors.WHITE,
+                    }}>
                         <MaterialCommunityIcons name="message" size={24} color="black" />
                     </View>
-                    <View style={styles.shoptab}>
+                    <View style={{
+                        width: '20%',
+                        height: '80%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderBottomWidth: 4,
+                        borderBottomColor: shoptab === 'post' ? Colors.purple : Colors.WHITE,
+                    }}>
                         <MaterialIcons name="add-home" size={24} color="black" />
                     </View>
                 </View>
@@ -728,6 +771,8 @@ Would you like me to generate another one?`},
                     borderTopWidth: 3,
                     flexDirection: 'row',
                     borderTopColor: Colors.lightgrey,
+                    borderBottomWidth: 3,
+                    borderBottomColor: Colors.lightgrey,
                 }}>
                     <View style={{
                         width: '75%',
@@ -859,13 +904,172 @@ Would you like me to generate another one?`},
                     </View>
                 </View>
                 {/* pics and vids change */}
-                <View style={{
+                {(shoptab === 'pic') && (<View style={{
                     width: '100%',
-                    height: '74%',
+                    height: '70%',
                     backgroundColor: Colors.WHITE,
-                    borderTopWidth: 3,
-                    borderTopColor: Colors.lightgrey,
-                }}></View>
+                }}>
+                    <FlatList
+                    data={pics}
+                    numColumns={2}
+                    renderItem={({ item }) => (
+                        <View style={{
+                            width: '50%',
+                            height: 200,
+                            alignItems: 'center',
+                            justifyContent: 'space-evenly',
+                        }}>
+                            <Image source={item.pic}
+                                style={{
+                                    width: '80%',
+                                    height: '50%',
+                                    resizeMode: 'contain',
+                            }}/>
+                            <View style={{
+                                width: '80%',
+                                height: '30%',
+                                alignItems: 'center',
+                                justifyContent: 'space-evenly',
+                            }}>
+                                <View style={{
+                                    width: '100%',
+                                    height: '40%',
+                                    flexDirection: 'row',
+                                }}>
+                                    <Text style={{
+                                        width: '70%',
+                                        fontFamily: 'outfit',
+                                        fontSize: 12,
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                    }}>
+                                        {item.pic_name}
+                                    </Text>
+                                    <Text style= {{
+                                        fontFamily: 'outfit',
+                                        fontSize: 12,
+                                        width: '30%',
+                                        textAlign: 'center',
+                                        backgroundColor: Colors.madublue,
+                                        borderRadius: 20,
+                                        color: Colors.WHITE,
+                                        textAlignVertical: 'center',
+                                    }}>
+                                        View
+                                    </Text>
+                                </View>
+                                <View style={{
+                                    width: '100%',
+                                    height: '40%',
+                                    flexDirection: 'row',
+                                }}>
+                                    <Text style={{
+                                        fontFamily: 'outfit',
+                                        fontSize: 12,
+                                        width: '70%',
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                    }}>{`${item.currency} ${item.price}`}</Text>
+                                    <Text style={{
+                                        width: '30%',
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                        backgroundColor: Colors.lightgrey,
+                                        borderRadius: 20,
+                                        fontFamily: 'outfit',
+                                        fontSize: 9,
+                                    }}>{item.updated}</Text>
+                                </View>
+                            </View>
+                        </View>
+                    )}
+                    initialNumToRender={10}
+                    keyExtractor={(item) => item.id.toString()}
+                    />
+                </View>)}
+                {/* Video show */}
+                {(shoptab === 'vid') && (<View style={{
+                    width: '100%',
+                    height: '70%',
+                    backgroundColor: Colors.WHITE,
+                }}>
+                    <FlatList
+                    data={pics}
+                    renderItem={({ item }) => (
+                        <View style={{
+                            width: '80%',
+                            height: 500,
+                            alignItems: 'center',
+                            justifyContent: 'space-evenly',
+                        }}>
+                            <Video source={item.vid}
+                                style={{
+                                    width: '90%',
+                                    height: '70%',
+                                    resizeMode: 'contain',
+                            }}/>
+                            <View style={{
+                                width: '80%',
+                                height: '30%',
+                                alignItems: 'center',
+                                justifyContent: 'space-evenly',
+                            }}>
+                                <View style={{
+                                    width: '100%',
+                                    height: '40%',
+                                    flexDirection: 'row',
+                                }}>
+                                    <Text style={{
+                                        width: '70%',
+                                        fontFamily: 'outfit',
+                                        fontSize: 12,
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                    }}>
+                                        {item.pic_name}
+                                    </Text>
+                                    <Text style= {{
+                                        fontFamily: 'outfit',
+                                        fontSize: 12,
+                                        width: '30%',
+                                        textAlign: 'center',
+                                        backgroundColor: Colors.madublue,
+                                        borderRadius: 20,
+                                        color: Colors.WHITE,
+                                        textAlignVertical: 'center',
+                                    }}>
+                                        View
+                                    </Text>
+                                </View>
+                                <View style={{
+                                    width: '100%',
+                                    height: '40%',
+                                    flexDirection: 'row',
+                                }}>
+                                    <Text style={{
+                                        fontFamily: 'outfit',
+                                        fontSize: 12,
+                                        width: '70%',
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                    }}>{`${item.currency} ${item.price}`}</Text>
+                                    <Text style={{
+                                        width: '30%',
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                        backgroundColor: Colors.lightgrey,
+                                        borderRadius: 20,
+                                        fontFamily: 'outfit',
+                                        fontSize: 9,
+                                    }}>{item.updated}</Text>
+                                </View>
+                            </View>
+                        </View>
+                    )}
+                    initialNumToRender={10}
+                    keyExtractor={(item) => item.id.toString()}
+                    />
+                </View>)}
             </View>
         </Modal>)}
       <View style={{
@@ -913,10 +1117,4 @@ const styles = StyleSheet.create({
         top: '20%',
         left: '10%',
     },
-    shoptab: {
-        width: '20%',
-        height: '80%',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
   })

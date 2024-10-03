@@ -13,6 +13,7 @@ export const Colors = {
   Grey: '#808080',
   Verify: '#41dc8e',
   lightgrey: '#cccccc',
+  purple: '#6c5ce7',
   light: {
     text: '#11181C',
     background: '#fff',
