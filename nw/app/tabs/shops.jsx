@@ -84,6 +84,10 @@ Would you like me to generate another one?`},
         {id: 10, shopid: 'aaa', userid: 'aaa', pic_name: 'Touch', price: '3000', currency: 'KES', pic: require('./../../assets/images/shop_aaa/aaa_10.png'), vid: require('./../../assets/videos/shop_aaa/aaa_v10.mp4'), updated: '24 Aug 2024'},
     ])
 
+    const closeShowshop = () => {
+        setShowshop(!showshop);
+        setShoptab('pic');
+    };
 
     const [page, setPage] = useState(1);
     const [shoptab, setShoptab] = useState('pic');
@@ -140,7 +144,7 @@ Would you like me to generate another one?`},
         height: '100%',
         backgroundColor: Colors.madublue,
     }}>
-        <View style={{
+        {(shoptab !== 'msg') && (<View style={{
             height: '17%',
             justifyContent: 'flex-end',
             flexDirection: 'column',
@@ -249,7 +253,12 @@ Would you like me to generate another one?`},
                     </View>
                 </View>
             </View>
-        </View>
+        </View>)}
+        {(shoptab === 'msg') && (<View style={{
+            height: '17%',
+            backgroundColor: Colors.WHITE,
+        }}>
+        </View>)}
         <SafeAreaView style={{
             height: '78%',
             backgroundColor: Colors.Grey,
@@ -645,7 +654,7 @@ Would you like me to generate another one?`},
         animationType='none'
         transparent={true}
         visible={showshop}
-        onRequestClose={() => setShowshop(!showshop)}>
+        onRequestClose={() => closeShowshop()}>
             <View style={{ 
                 width: '100%',
                 height: '100%',
@@ -742,7 +751,7 @@ Would you like me to generate another one?`},
                     }}>
                         <MaterialIcons name="video-collection" size={24} color="black" />
                     </TouchableOpacity>
-                    <View style={{
+                    <TouchableOpacity onPress={() => setShoptab('msg')} style={{
                         width: '20%',
                         height: '80%',
                         alignItems: 'center',
@@ -751,7 +760,7 @@ Would you like me to generate another one?`},
                         borderBottomColor: shoptab === 'msg' ? Colors.purple : Colors.WHITE,
                     }}>
                         <MaterialCommunityIcons name="message" size={24} color="black" />
-                    </View>
+                    </TouchableOpacity>
                     <View style={{
                         width: '20%',
                         height: '80%',
@@ -764,7 +773,7 @@ Would you like me to generate another one?`},
                     </View>
                 </View>
                 {/* After icons row */}
-                <View style={{
+                {(shoptab !== 'msg') && (<View style={{
                     width: '100%',
                     height: '20%',
                     backgroundColor: Colors.WHITE,
@@ -902,7 +911,7 @@ Would you like me to generate another one?`},
                             <View style={{width: '45%'}}><MaterialCommunityIcons name="book-edit-outline" size={18} color="black" /></View>
                         </View>
                     </View>
-                </View>
+                </View>)}
                 {/* pics and vids change */}
                 {(shoptab === 'pic') && (<View style={{
                     width: '100%',
@@ -1088,6 +1097,117 @@ Would you like me to generate another one?`},
                     keyExtractor={(item) => item.id.toString()}
                     />
                 </View>)}
+                {/* message show */}
+                {(shoptab === 'msg') && (
+                    <View style={{
+                        width: '100%',
+                        height: '90%',
+                    }}>
+                        <View style={{
+                            width: '100%',
+                            height: '85%',
+                            backgroundColor: Colors.lightgrey,   
+                        }}>
+                            <FlatList
+                            data={msg}
+                            renderItem={({ item }) => (
+                                <View style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    alignItems: 'center',
+                                }}>
+                                    <View style={{
+                                        paddingTop: 5,
+                                        width: '100%',
+                                        alignItems: 'center',
+                                    }}>
+                                        <Text style={{
+                                            color: Colors.WHITE,
+                                            textAlign: 'center',
+                                            borderRadius: 20,
+                                            backgroundColor: Colors.madublue,
+                                            width: '20%',
+                                        }}>{`${Object.keys(item)[0].substring(0,2)}/${Object.keys(item)[0].substring(2,4)}/${Object.keys(item)[0].substring(4,8)}`}</Text>
+                                    </View>
+                                    <View style={{width: '100%'}}>
+                                        <FlatList
+                                            data={Object.values(item)[0]}
+                                            renderItem={({ item }) => (
+                                                <View style={{
+                                                    width: '100%',
+                                                    paddingTop: 10,
+                                                    paddingBottom: 5,
+                                                    alignItems: item.userid === usrid ? 'flex-start' : 'flex-end',
+                                                    paddingLeft: item.userid === usrid ? 10 : 0,
+                                                    paddingRight: item.userid === usrid ? 0 : 10,
+                                                }}>
+                                                    <Text key={item.simpleid} style={{
+                                                        flexWrap: 'wrap',
+                                                        width: '80%',
+                                                        borderTopRightRadius: item.userid === usrid ? 30 : 0,
+                                                        borderBottomRightRadius: item.userid === usrid ? 30 : 0,
+                                                        borderTopLeftRadius: item.userid === usrid ? 0 : 30,
+                                                        borderBottomLeftRadius: item.userid === usrid ? 0 : 30,
+                                                        height: item.message.length < 60 ? 30 : (item.message.length / 69) * 20,
+                                                        backgroundColor: item.userid === usrid ? Colors.madublue : Colors.Grey,
+                                                        color: item.userid === usrid ? Colors.WHITE : Colors.WHITE,
+                                                        textAlign: item.userid === usrid ? 'left' : 'right',
+                                                    }}>{item.message}</Text>
+                                                    <View>
+                                                        <Text>
+                                                            {item.time}
+                                                        </Text>
+                                                    </View>
+                                                </View>
+                                            )}
+                                            initialNumToRender={10}
+                                            keyExtractor={(item) => item.simpleid.toString()}
+                                        />
+                                    </View>
+                                </View>
+                            )}
+                            initialNumToRender={10}
+                            keyExtractor={(item) => item.id.toString()}
+                            />
+                        </View>
+                        <View style={{
+                            width: '100%',
+                            height: '15%',
+                            borderTopWidth: 1,
+                            borderColor: Colors.Grey,
+                            backgroundColor: Colors.lightgrey,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        }}>
+                            <TextInput style={{
+                                paddingLeft: 10,
+                                width: '75%',
+                                height: '25%',
+                                fontSize: 16,
+                                fontFamily: 'outfit',
+                            }} placeholder='Type a message...'/>
+                            <View style={{
+                                width: '25%',
+                                height: '60%',
+                            }}>
+                                <Text style={{
+                                    width: '70%',
+                                    height: '90%',
+                                    fontSize: 15,
+                                    fontFamily: 'outfit-bold',
+                                    textAlign: 'center',
+                                    textAlignVertical: 'center',
+                                    color: Colors.WHITE,
+                                    backgroundColor: Colors.madublue,
+                                    borderRadius: 20,
+
+                                }}>
+                                    Send
+                                </Text>
+                            </View>
+                        </View>
+                    </View>
+                )}
             </View>
         </Modal>)}
       <View style={{
